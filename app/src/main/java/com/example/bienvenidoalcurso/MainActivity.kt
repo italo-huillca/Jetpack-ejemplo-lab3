@@ -71,7 +71,7 @@ fun GreetingCard() {
         Spacer(modifier = Modifier.height(8.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            painter = painterResource(id = R.drawable.androidparty),
             contentDescription = "Course Image",
             modifier = Modifier.size(100.dp)
         )
