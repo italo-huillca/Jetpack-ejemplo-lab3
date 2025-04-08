@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -57,7 +59,8 @@ fun GreetingCard() {
             .padding(16.dp)
             .background(Color.Black)
             .border(2.dp,Color.Red),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = "BIENVENIDO AL CURSO!",
@@ -71,6 +74,20 @@ fun GreetingCard() {
             color = Color.White,
             fontSize = 20.sp,
         )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround
+        ) {
+            Button(onClick = { /* Simulación de acción */ }) {
+                Text("Accept")
+            }
+            Button(onClick = { /* Simulación de acción */ }) {
+                Text("Decline")
+            }
+        }
         Spacer(modifier = Modifier.height(8.dp))
 
         TextField(
