@@ -14,6 +14,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -25,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -62,6 +66,12 @@ fun GreetingCard() {
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = "Hola, Italo!",
+            color = Color.White,
+            fontSize = 20.sp,
+        )
+        Spacer(modifier = Modifier.height(8.dp))
 
         TextField(
             value = "",
@@ -69,7 +79,20 @@ fun GreetingCard() {
             label = { Text("Enter your name") }
         )
         Spacer(modifier = Modifier.height(8.dp))
-
+        Button(onClick = { /* Simulación de acción */ },
+            enabled = true,
+            shape = RoundedCornerShape(20.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Blue,
+            )
+            ) {
+            Text(
+                text = "Hola mundo",
+                fontFamily = FontFamily.Monospace,
+                fontSize = 20.sp
+            )
+        }
+        Spacer(modifier = Modifier.height(8.dp))
         Image(
             painter = painterResource(id = R.drawable.androidparty),
             contentDescription = "Course Image",
